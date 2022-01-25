@@ -32,5 +32,6 @@ mediation <- function(model, data = NULL, stat = all_indirect, nrep = 5000, alph
   
   results <- boot(model = model, data = data, FUN = stat, nrep = nrep, alpha = alpha)
   # results <- structure(results, class = "mediation")
+  
   return(results)
 }
