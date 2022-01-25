@@ -1,0 +1,18 @@
+Package: pathanalysis
+Type: Package
+Title: Recursive path modelling
+Version: 0.1.0
+Authors@R:
+    c(person(given = "P.-O.",
+             family = "Caron",
+             role = c("aut","cre","cph"),
+             email = "pocaron19@gmail.com",
+             comment = c(ORCID = "0000-0001-6346-5583")))
+Description: Path Analysis. Path analysis is a form of multiple regression statistical analysis that is used to evaluate causal models by examining the relationships between a dependent variable and two or more independent variables.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.2
+Roxygen: list(markdown = TRUE)
+Depends: 
+    R (>= 2.10)
