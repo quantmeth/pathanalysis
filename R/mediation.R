@@ -31,7 +31,10 @@ mediation <- function(model, data = NULL, stat = all_indirect, nrep = 5000, alph
   }
   
   results <- boot(model = model, data = data, FUN = stat, nrep = nrep, alpha = alpha)
+<<<<<<< HEAD
   results <- structure(results, class = "mediation")
+=======
+>>>>>>> 20738fddf80733924b332e8ee7c3351c2f232c7b
   #print(format(round(results, 3), nsmall = 3))
   return(results)
 }
