@@ -12,5 +12,5 @@
 #' print(results)
 #' }
 print.PAmediation <- function(x, ...){
-    round(x$results, 3)
+    print(round(x$results, 3))
   }

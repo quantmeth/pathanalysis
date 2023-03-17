@@ -37,7 +37,7 @@ rpath <- function(n,
   
   svdd <- svd(Sigma)
   ld <- svdd$u %*% diag(svdd$d^(.5))
-  jd <- t(ld %*% matrix(rnorm(n * p), p, n) + mu)
+  jd <- t(ld %*% matrix(stats::rnorm(n * p), p, n) + mu)
   colnames(jd) <- colnames(Sigma)
   
   return(jd)

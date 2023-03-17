@@ -29,8 +29,8 @@ mediation <- function(model, data = NULL, stat = all_indirect, nrep = 5000, alph
   if(standardized){
     data <- apply(data, MARGIN = 2, FUN = function(x) (x-mean(x))/sd(x))
   }
-  
-  results <- structure(results = list(boot(model = model, data = data, FUN = stat, nrep = nrep, alpha = alpha)),
+  out <- list(results = boot(model = model, data = data, FUN = stat, nrep = nrep, alpha = alpha))
+  results <- structure(out,
                        class = "PAmediation")
   
   return(results)
