@@ -18,7 +18,7 @@
 #' @export
 #'
 #' @examples
-#'mediation(model = y ~ m2 ~ m1 ~ x, data = medEX, standardized = TRUE)
+#' mediation(model = y ~ m2 ~ m1 ~ x, data = medEX, standardized = TRUE)
 
 mediation <- function(model, data = NULL, stat = all_indirect, nrep = 5000, alpha = .05, standardized = FALSE){
   vars <- all.vars(model)

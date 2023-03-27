@@ -1,3 +1,14 @@
+#' The causal step methods more widely known as the Baron-Kenny method
+#' @description Perform the Baron-Kenny method on a recursive path model.
+#' @param out An output of class \code{PAmediaiton} form pathanalysis::mediation.
+#' @param alpha Type I error rate. Default is the one from the original mediation.
+#'
+#' @return Determine if there is a mediated relation for each indirect effects and whether it is partial or complete.
+#' @export
+#'
+#' @examples
+#' res <- mediation(model = y ~ m2 ~ m1 ~ x, data = medEX, standardized = TRUE)
+#' BK(res)
 BK <- function(out, alpha = out$alpha){
   model <- out$model
   res <- out$results
