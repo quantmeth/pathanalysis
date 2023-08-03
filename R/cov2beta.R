@@ -14,7 +14,9 @@
 cov2beta = function(S){
 
   p = dim(S)[1]          # Nombre de variable
-  BETA = matrix(0, p, p) # Matrice vide
+  BETA = matrix(0, p, p, 
+                dimnames = list(rownames(S),
+                                colnames(S))) # Matrice vide
 
   # Boucle de calcul pour la covariance de la variable i (i = 1:(p-1))
   for(i in 1:(p-1)){

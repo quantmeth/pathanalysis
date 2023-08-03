@@ -23,7 +23,10 @@ beta2cov = function(B, V = NULL){
   }else{                        # autrement il s'agit d'une matrice
     S = diag(V)                 # avec les variances en diagonale
   }
-
+  
+  colnames(S) <- colnames(B)
+  rownames(S) <- rownames(B)
+  
   # Boucle de calcul pour la covariance de la variable i (i = 2:p)
   for(i in 2:p){
     COV = B[(i), (1:(i-1))] %*% S[1:(i-1), 1:(i-1)]
